@@ -12,6 +12,8 @@ See https://newsapi.org/ for more information
 <string name="news_api_key" translatable="false">YOUR_NEWSAPI_KEY_HERE</string>
 ```
 
+<img src="https://user-images.githubusercontent.com/19874536/56907564-2e4a0480-6aad-11e9-9462-9903dcd53696.png" width="360" height="360"/>
+
 ## Tech stack
 * Kotlin
 * MVVM
