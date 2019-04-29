@@ -1,6 +1,7 @@
 # NewsApp
 Discover TechCrunch news
 
+<img src="https://user-images.githubusercontent.com/19874536/56903102-53864500-6aa4-11e9-86fa-059fe11f4699.png" width="180" height="360"/>
 
 ## Instructions
 Replace the string value of `news_api_key` with your newsapi.org key for the app to work
