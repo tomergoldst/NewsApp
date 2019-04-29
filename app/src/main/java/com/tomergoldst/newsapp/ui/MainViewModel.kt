@@ -31,6 +31,10 @@ class MainViewModel(
     private val mContext: Context = getApplication()
 
     init {
+        refresh()
+    }
+
+    fun refresh(){
         _dataLoading.value = true
 
         if (NetworkUtils.hasNetworkConnection(mContext)) {
@@ -40,11 +44,6 @@ class MainViewModel(
             _dataLoading.value = false
             _hasNetworkConnection.value = false
         }
-    }
-
-    fun refresh(){
-        _dataLoading.value = true
-        discoverNewsArticles()
     }
 
     private fun discoverNewsArticles() {
