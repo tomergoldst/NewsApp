@@ -3,5 +3,6 @@
 
     <string name="news_api_key" translatable="false">YOUR_NEWSAPI_KEY_HERE</string>
     <string name="loading">Loading…</string>
+    <string name="no_data">No Data</string>
 
 </resources>

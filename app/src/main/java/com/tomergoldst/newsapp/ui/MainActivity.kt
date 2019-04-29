@@ -32,11 +32,11 @@ class MainActivity : AppCompatActivity(),
 
         mModel.getNewsArticles().observe(this, Observer {
             mAdapter.submitList(it)
+            updateUi(it.size)
         })
 
         mModel.dataLoading.observe(this, Observer {
             if (it) contentLoadingProgressBar.show() else contentLoadingProgressBar.hide()
-            recyclerView.isVisible = !it
         })
 
         mModel.hasNetworkConnection.observe(this, Observer {
@@ -59,6 +59,7 @@ class MainActivity : AppCompatActivity(),
         }
 
         contentLoadingProgressBar.show()
+        emptyView.isVisible = false
 
         if (getString(R.string.news_api_key) == "YOUR_NEWSAPI_KEY_HERE"){
             Toast.makeText(this, "Missing newapi.org api key", Snackbar.LENGTH_LONG).show()
@@ -81,6 +82,16 @@ class MainActivity : AppCompatActivity(),
             .also { it.putExtra(NewsArticleActivity.EXTRA_URL, newsArticle.url) }
             .also { it.putExtra(NewsArticleActivity.EXTRA_TITLE, newsArticle.title) }
         )
+    }
+
+    private fun updateUi(newsArticlesCount: Int){
+        if (newsArticlesCount > 0){
+            emptyView.isVisible = false
+            recyclerView.isVisible = true
+        } else {
+            recyclerView.isVisible = false
+            emptyView.isVisible = true
+        }
     }
 
 }

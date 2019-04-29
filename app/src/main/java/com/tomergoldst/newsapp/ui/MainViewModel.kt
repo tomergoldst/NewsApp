@@ -43,6 +43,7 @@ class MainViewModel(
         } else {
             _dataLoading.value = false
             _hasNetworkConnection.value = false
+            mNewsArticles.value = ArrayList()
         }
     }
 
