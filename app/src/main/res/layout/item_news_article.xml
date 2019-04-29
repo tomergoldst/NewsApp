@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/colorCardSurface"
+    app:contentPaddingBottom="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/articleImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/articleTitleTxv"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            tools:text="Article title" />
+
+        <TextView
+            android:id="@+id/articlePublishedAtTxv"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            tools:text="Tue, 14 nov 2017 00:06" />
+
+        <TextView
+            android:id="@+id/articleDescriptionTxv"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            tools:text="Short description" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
